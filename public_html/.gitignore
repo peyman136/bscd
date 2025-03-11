@@ -1,0 +1,8 @@
+/uploads
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+*.zip
+*.rar
