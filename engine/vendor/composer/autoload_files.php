@@ -28,6 +28,7 @@ return array(
     '508dab6c0a7dfd955e775df925e6d583' => $vendorDir . '/hekmatinasser/jalali/src/helpers.php',
     '47e1160838b5e5a10346ac4084b58c23' => $vendorDir . '/laravel/prompts/src/helpers.php',
     'a1cfe24d14977df6878b9bf804af2d1c' => $vendorDir . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
+    '3109cb1a231dcd04bee1f9f620d46975' => $vendorDir . '/paragonie/sodium_compat/autoload.php',
     'aadac1114cab8dc19489a7f6dc24c003' => $vendorDir . '/pestphp/pest-plugin-arch/src/Autoload.php',
     'e39a8b23c42d4e1452234d762b03835a' => $vendorDir . '/ramsey/uuid/src/functions.php',
     'a4ecaeafb8cfb009ad0e052c90355e98' => $vendorDir . '/beberlei/assert/lib/Assert/functions.php',
@@ -48,4 +49,5 @@ return array(
     'e4e590a9b5afe940db71ee1662c02677' => $vendorDir . '/morilog/jalali/src/helpers.php',
     'd634523d799d97a8ab4807b650bf5cea' => $vendorDir . '/pestphp/pest-plugin-laravel/src/Autoload.php',
     '69044b48478efb2bbc691184143c0af0' => $vendorDir . '/peyman136/baloot/src/helpers.php',
+    'd1661eee51f445744684bc596e61def0' => $vendorDir . '/spatie/laravel-csp/src/helpers.php',
 );
