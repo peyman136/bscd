@@ -8,7 +8,7 @@ use Symfony\Component\Process\Process;
 
 class System
 {
-    protected $salt = '46e621905e032ff9a8effc5905a87c791b095e16b1773f7f6a631ab39c8e4885';
+    protected $salt = '46e621905e032ff9a8effc5905a87c791b095e16b1773f7f6a631ab39c8e4885'; // change in every release
     protected $words = [
         "algorithm", "database", "compiler", "encryption", "protocol",
         "debugging", "variable", "function", "framework", "iteration",
@@ -21,7 +21,7 @@ class System
         "moscow", "dubai", "sydney",
         "apple", "banana", "cherry", "mango", "pineapple",
         "grape", "strawberry", "kiwi", "pomegranate"
-    ];
+    ]; // change in every release
     private function shuffle(string $word): string {
         $seed = hexdec(substr(hash('sha256', $word), 0, 8));
         $chars = str_split($word);
@@ -62,11 +62,8 @@ class System
                 $mac = $this->getMacAddress();
                 $diskSerial = $this->getDiskSerial();
 
-                // ترکیب داده‌ها با یک SALT داخلی
                 $salt = $this->generateSalt();
                 $rawData = "$cpuId|$uuid|$mac|$diskSerial|$salt";
-                //dd($rawData);
-                // تولید کلید هش شده
                 $key = hash('sha256', $rawData);
                 return $newEncrypter->encrypt($key);
             }));
@@ -77,11 +74,9 @@ class System
     }
     private function runProcess(string $command): string
     {
-        // اجرای دستور سیستم با استفاده از Symfony Process
         $process = Process::fromShellCommandline($command);
         $process->run();
 
-        // بررسی اجرای موفقیت‌آمیز دستور
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
         }
